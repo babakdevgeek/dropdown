@@ -1,49 +1,3 @@
-nav {
-  padding: 0 1rem;
-  background-color: #e0eab1;
-  overflow: hidden;
-}
-nav a {
-  text-decoration: none;
-  color: rgb(88, 85, 69);
-  font-size: 1.2rem;
-  padding: 1rem;
-  float: left;
-}
-nav a:hover {
-  background-color: #d1d0c7;
-}
-button {
-  border: none;
-  outline: none;
-  padding: 1.2rem 1.4rem;
-  border-radius: 5px;
-  background-color: #686944;
-  color: #e0eab1;
-  cursor: pointer;
-}
-.div-button {
-  float: left;
-  overflow: hidden;
-}
-.div-button:hover .dropdown {
-  display: block;
-}
-nav .dropdown {
-  display: none;
-  position: absolute;
-  min-width: 150px;
-  background-color: #686944;
-  box-shadow: 0px 1px 4px 0 #373835;
-  z-index: 1;
-}
-nav .dropdown a {
-  display: block;
-  float: none;
-  text-align: left;
-  color: #e0eab1;
-  text-decoration: none;
-}
 *,
 *::after,
 *::before {
@@ -52,10 +6,92 @@ nav .dropdown a {
 body {
   padding: 0;
   margin: 0;
+  font-family: "Times New Roman", Times, serif;
 }
-.sub-nav {
+nav {
+  background-color: darkmagenta;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+nav h1 {
+  color: royalblue;
+  margin: 0;
+}
+nav a {
+  text-decoration: none;
+  color: mediumaquamarine;
+}
+.logo-link {
+  padding: 0.7rem;
+}
+.main-links {
+  display: flex;
+}
+nav a,
+nav button {
+  text-transform: capitalize;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: "Times New Roman", Times, serif;
+}
+nav a:hover,
+nav button:hover,
+nav .sub-menu:hover {
+  background-color: mediumaquamarine;
+  color: darkmagenta;
+  border-radius: 4px;
+}
+.sub-menu:hover button {
+  color: darkmagenta;
+}
+nav button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: mediumaquamarine;
+}
+.sub-menu {
+  float: left;
+}
+.sub-menu-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  background-color: mediumaquamarine;
+  width: 100%;
+}
+.sub-menu-content a {
+  float: left;
+  color: darkmagenta;
+}
+nav .sub-menu:hover .sub-menu-content {
+  display: block;
+}
+.sub-sub-menu-content {
   display: none;
 }
-.div-button a:hover .sub-nav {
+.sub-sub-menu {
+  float: left;
+}
+.sub-sub-menu:hover,
+.sub-sub-menu:hover button,
+.sub-sub-menu:hover .sub-sub-menu-content {
+  background-color: deeppink;
+  color: darkolivegreen;
+}
+.sub-sub-menu:hover .sub-sub-menu-content a:hover {
+  background-color: blue;
+  color: white;
+}
+.sub-sub-menu-content {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+.sub-sub-menu:hover .sub-sub-menu-content {
   display: block;
 }
